@@ -18,12 +18,21 @@
     <ClInclude Include="sqlist.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="linklist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sqlist.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="usesqlist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="linklist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uselinklist.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
