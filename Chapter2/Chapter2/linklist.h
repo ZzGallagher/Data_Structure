@@ -1,5 +1,5 @@
 //单链表
-#ifndef _SqList_
+#ifndef LINKLIST_H_
 
 typedef int ElemType;	//int为ElemType，仅为数据类型举例用
 

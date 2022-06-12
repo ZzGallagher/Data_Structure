@@ -21,6 +21,9 @@
     <ClInclude Include="linklist.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="polynomial.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sqlist.cpp">
@@ -33,6 +36,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="uselinklist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="polynomial.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
