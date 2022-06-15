@@ -9,6 +9,9 @@ typedef struct{
 	SElemType*top;	//栈顶指针
 	int stacksize;	//当前已分配的存储空间，以元素为单位
 }SqStack;
+//栈空：top==base
+//栈满：top-base=stacksize
+
 //方法
 void initStack(SqStack&S);	//初始化
 void destoryStack(SqStack&S);	//销毁顺序栈

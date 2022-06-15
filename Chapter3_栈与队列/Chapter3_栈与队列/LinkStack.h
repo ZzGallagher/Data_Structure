@@ -1,3 +1,4 @@
+//Á´Õ»
 #ifndef LINKSTACK_H_
 
 typedef int SElemnType;

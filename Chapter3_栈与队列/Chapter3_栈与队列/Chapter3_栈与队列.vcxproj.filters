@@ -21,6 +21,9 @@
     <ClInclude Include="LinkStack.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SqStack.cpp">
@@ -30,6 +33,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="LinkStack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Queue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="useQueue.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
