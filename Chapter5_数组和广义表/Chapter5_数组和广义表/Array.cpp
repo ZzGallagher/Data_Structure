@@ -1,4 +1,8 @@
 #include"Array.h"
+#include<iostream>
+using std::cout;
+using std::cin;
+using std::endl;
 
 void SpareMatrix::TransposeSMatrix(TSMatrix M, TSMatrix&T){
 	//采用三元组表示表存储表示，求稀疏矩阵M的转置矩阵T
@@ -22,11 +26,18 @@ void SpareMatrix::TransposeSMatrix(TSMatrix M, TSMatrix&T){
 
 void SpareMatrix::printTSMatrix(TSMatrix M){
 	int row, column;
-	row = column = 0;
-	for (row; row <= M.rownum - 1; ++row){
-		for (column; column <= M.colnum - 1; ++column){
-
+	int p = 1;
+	row = column = 1;
+	for (row; row <= M.rownum ; ++row){
+		for (column; column <= M.colnum ; ++column){
+			if (row == M.data[p].i && column == M.data[p].j)
+			{
+				cout << M.data[p].e << '\t';
+				++p;
+			}
+			else
+				cout << 0 << '\t';
 		}
+		cout << endl;
 	}
-
 }
