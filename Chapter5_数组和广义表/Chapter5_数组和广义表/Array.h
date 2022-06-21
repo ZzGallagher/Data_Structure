@@ -15,10 +15,11 @@ namespace Array{
 
 //三元组顺序表表示稀疏矩阵
 namespace SpareMatrix{
-	#define MAXSIZE 12500	//非零元素个数最大值为12500
+	#define MAXSIZE 20	//非零元素个数最大值为12500
 	typedef int ElemType;
 	typedef struct{
-		int i, j;	//行下标、列下标
+		int i;
+		int j;//行下标、列下标
 		ElemType e;
 	}Triple;
 	typedef struct{
@@ -28,4 +29,19 @@ namespace SpareMatrix{
 
 	void TransposeSMatrix(TSMatrix M, TSMatrix&T);	//采用三元组表示表存储表示，求稀疏矩阵M的转置矩阵T
 	void printTSMatrix(TSMatrix M);
+}
+
+//广义表
+namespace GList {
+	typedef int AtomType;
+	typedef enum{ATOM,LIST}ElemTag;	//ATOM == 0：原子 LIST == 1：子表
+	typedef struct GLNode {
+		ElemTag tag;
+		union {
+			AtomType atom;
+			struct {
+				struct GLNode* hp, * tp;
+			}ptr;	//ptr是表结点的指针域，ptr.hp和ptr.tp分别指向表头和表尾
+		};
+	}*GList;//广义表类型
 }
