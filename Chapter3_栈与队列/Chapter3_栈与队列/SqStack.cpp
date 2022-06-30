@@ -3,9 +3,9 @@
 using std::cout;
 using std::cin;
 using std::endl;
-//·½·¨¶¨Òå
+//æ–¹æ³•å®šä¹‰
 void initStack(SqStack&S){
-	//³õÊ¼»¯
+	//åˆå§‹åŒ–
 	S.base = new SElemType[STACK_INIT_SIZE];
 	if (!S.base){
 		cout << "Error!Initialization Failed!\n";
@@ -15,7 +15,7 @@ void initStack(SqStack&S){
 	S.stacksize = STACK_INIT_SIZE;
 }
 void destoryStack(SqStack&S){
-	//Ïú»ÙË³ĞòÕ»
+	//é”€æ¯é¡ºåºæ ˆ
 	if (S.base){
 		S.stacksize = 0;
 		S.base = S.top = NULL;
@@ -26,31 +26,31 @@ void destoryStack(SqStack&S){
 	}
 }
 void clearStack(SqStack&S){
-	//Çå¿ÕË³ĞòÕ»
+	//æ¸…ç©ºé¡ºåºæ ˆ
 	if (S.base)
 		S.top = S.base;	
 }
 bool stackEmpty(SqStack S){
-	//ÅĞ¶ÏÕ»ÊÇ·ñÎª¿Õ
+	//åˆ¤æ–­æ ˆæ˜¯å¦ä¸ºç©º
 	if (S.top == S.base)
 		return true;
 	else
 		return false;
 }
 int stackLength(SqStack S){
-	//ÇóÕ»µÄ³¤¶È
+	//æ±‚æ ˆçš„é•¿åº¦
 	return S.stacksize;
 }
 void getTop(SqStack S, SElemType&e){
-	//ÓÃe·µ»ØSµÄÕ»¶¥ÔªËØ
+	//ç”¨eè¿”å›Sçš„æ ˆé¡¶å…ƒç´ 
 	if (stackEmpty(S)){
 		cout << "Empty Stack!No Elemnts to Get!\n";
 		return;
 	}
-	e = *S.top;
+	e = *ï¼ˆ--S.topï¼‰;
 }
 void push(SqStack&S, SElemType e){
-	//ÈëÕ»
+	//å…¥æ ˆ
 	if (S.top - S.base == S.stacksize){
 		cout << "Full Stack!Cannot Push!\n";
 		return;
@@ -58,7 +58,7 @@ void push(SqStack&S, SElemType e){
 	*S.top++ = e;
 }
 void pop(SqStack&S, SElemType&e){
-	//³öÕ»
+	//å‡ºæ ˆ
 	if (stackEmpty(S)){
 		cout << "Empty Stack!Cannot Pop!\n";
 		return;
@@ -66,7 +66,7 @@ void pop(SqStack&S, SElemType&e){
 	e = *(--S.top);
 }
 void printStack(SqStack S){
-	//(S.top - S.base) / sizeof(SElemType)²»±ØÒªÕâÑù×ö£¬cout»á×Ô¶¯Ê¶±ğ
+	//(S.top - S.base) / sizeof(SElemType)ä¸å¿…è¦è¿™æ ·åšï¼Œcoutä¼šè‡ªåŠ¨è¯†åˆ«
 	cout << "There's " << S.top - S.base << " elemnts in the Sequence Stack.\n";
 	for (SElemType*p = S.base; p < S.top; p++)
 		cout << *p << '\t';
